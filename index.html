@@ -1,1 +1,225 @@
-<p> Welcome to PIC Laboratory </p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 笔计算与交互实验室 - AML</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background: #2c3e50;
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* 横幅 */
+        .banner {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('lab-bg.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 10%;
+        }
+
+        .banner-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* 研究领域 */
+        .research-section {
+            padding: 5rem 5%;
+            background: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .research-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .research-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* 团队成员 */
+        .team-section {
+            padding: 5rem 5%;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .member-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            object-fit: cover;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 5%;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .banner-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">AML LAB</div>
+        <div class="nav-links">
+            <a href="#home">首页</a>
+            <a href="#research">研究领域</a>
+            <a href="#team">团队</a>
+            <a href="#publications">成果</a>
+            <a href="#contact">联系</a>
+        </div>
+    </nav>
+
+    <!-- 横幅 -->
+    <section class="banner" id="home">
+        <div class="banner-content">
+            <h1>笔计算与交互实验室</h1>
+            <p>探索材料科学前沿，创造未来科技</p>
+        </div>
+    </section>
+
+    <!-- 研究领域 -->
+    <section class="research-section" id="research">
+        <h2 class="section-title">研究领域</h2>
+        <div class="research-grid">
+            <div class="research-card">
+                <h3>纳米材料</h3>
+                <p>开发新型纳米结构材料及其应用</p>
+                <i class="fas fa-atom fa-2x"></i>
+            </div>
+            <div class="research-card">
+                <h3>能源材料</h3>
+                <p>高效能源存储与转换材料研究</p>
+                <i class="fas fa-battery-full fa-2x"></i>
+            </div>
+            <div class="research-card">
+                <h3>生物材料</h3>
+                <p>医用生物兼容性材料开发</p>
+                <i class="fas fa-dna fa-2x"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 团队成员 -->
+    <section class="team-section" id="team">
+        <h2 class="section-title">研究团队</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="src/wu.png" alt="吴仲城研究员" class="member-photo">
+                <h3>吴仲城 研究员</h3>
+<!--                <p>实验室负责人</p>-->
+            </div>
+            <div class="team-member">
+                <img src="src/zhang.png" alt="张俊研究员" class="member-photo">
+                <h3>张俊 研究员</h3>
+<!--                <p>高级研究员</p>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>联系我们</h3>
+                <p>地址：合肥市蜀山区习友路100号</p>
+<!--                <p>电话：+86 123-456789</p>-->
+                <p>邮箱：zcwu@iim.ac.cn</p>
+            </div>
+            <div>
+                <h3>快速链接</h3>
+                <a href="#home">实验室动态</a><br>
+                <a href="#research">科研设备</a><br>
+                <a href="#publications">最新成果</a>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 2rem;">© 2023 AML实验室 版权所有</p>
+    </footer>
+</body>
+</html>
