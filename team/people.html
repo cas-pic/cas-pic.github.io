@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    /* 团队成员 */
+    .team-section {
+        padding: 5rem 5%;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .team-member {
+        text-align: center;
+    }
+
+    .member-photo {
+        width: 200px;
+        height: 300px;
+        border-radius: 0%;
+        margin: 0 auto 1rem;
+        object-fit: cover;
+    }
+
+    /* 子组标题样式 */
+    .team-subgroup {
+        margin-bottom: 3rem;
+    }
+
+    .subgroup-title {
+        color: #2c3e50;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #3498db;
+    }
+
+    /* 子组网格布局 */
+    .subgroup-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    /* 成员信息调整 */
+    .team-member h4 {
+        font-size: 1.1rem;
+        margin: 0.8rem 0;
+    }
+
+    .team-member p {
+        color: #7f8c8d;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    /* 层级容器 */
+    .team-hierarchy {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    /* 子组标题增强 */
+    .subgroup-title {
+        font-size: 1.5rem;
+        color: #2c3e50;
+        padding-left: 1rem;
+        border-left: 4px solid #3498db;
+        margin-bottom: 2rem;
+    }
+
+    /* 子网格间距优化 */
+    .subgroup-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    /* 不同层级的视觉区分 */
+    .team-subgroup {
+        background: #f9f9f9;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    /* 研究员层级强调 */
+    .team-subgroup:nth-child(1) {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border: 1px solid #dee2e6;
+    }
+
+    /* 博士生层级 */
+    .team-subgroup:nth-child(2) {
+        background: #f8fbff;
+        border: 1px solid #e3f2fd;
+    }
+
+    /* 硕士生层级 */
+    .team-subgroup:nth-child(3) {
+        background: #fff9f5;
+        border: 1px solid #ffecdc;
+    }
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<!-- 团队成员 -->
+<!-- 团队成员 -->
+<section class="team-section" id="team">
+    <h2 class="section-title">研究团队</h2>
+
+    <div class="team-hierarchy">
+        <!-- 研究员 -->
+        <div class="team-subgroup">
+            <h3 class="subgroup-title">研究员</h3>
+            <div class="subgroup-grid">
+                <div class="team-member">
+                    <img src="../src/wu.png" alt="吴仲城研究员" class="member-photo">
+                    <h4>吴仲城 研究员</h4>
+                </div>
+                <div class="team-member">
+                    <img src="../src/zhang1.png" alt="张俊研究员" class="member-photo">
+                    <h4>张俊 研究员</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- 博士生 -->
+        <div class="team-subgroup">
+            <h3 class="subgroup-title">博士生</h3>
+            <div class="subgroup-grid">
+                <div class="team-member">
+                    <img src="https://jw-li.github.io/images/ljw.jpg" alt="李锦伟" class="member-photo">
+                    <h4>李锦伟 博士生</h4>
+                    <p>研究方向：数字纸张与信息安全</p>
+                </div>
+                <div class="team-member">
+                    <img src="../src/people/zqb.png" alt="博士生姓名" class="member-photo">
+                    <h4>张强博 博士生</h4>
+                    <p>研究方向：动态交通事故过程三维重建</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 硕士生 -->
+        <div class="team-subgroup">
+            <h3 class="subgroup-title">硕士生</h3>
+            <div class="subgroup-grid">
+                <div class="team-member">
+                    <img src="../src/people/wzh.png" alt="王子辉" class="member-photo">
+                    <h4>王子辉 硕士生</h4>
+                    <p>研究方向：基于属性基加密的敏感数据保护</p>
+                </div>
+<!--                <div class="team-member">-->
+<!--                    <img src="../src/student4.jpg" alt="硕士生姓名" class="member-photo">-->
+<!--                    <h4>赵六 硕士生</h4>-->
+<!--                    <p>研究方向：机器学习</p>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
